@@ -1,5 +1,6 @@
 body
 {
+  padding: 0;
   margin: 0;
   /* make it look decent enough */
 }
@@ -163,8 +164,20 @@ body
   font-family: 'Darker Grotesque', sans-serif;
   padding-right: 2rem;
   padding-left: 2rem;
+  animation: info-load 2500ms ease-out;
 }
 
+@keyframes info-load {
+  0% {
+    transform:translateX(-50%) translateY(-250%);
+    opacity: 0;
+    filter: blur(5px);
+    transition: all 2s;
+  }
+  100% {
+    transform:translateX(-50%) translateY(-50%);
+  }
+}
 
  .info-text {
   font-size: 5rem;
@@ -233,7 +246,7 @@ section {
   font-family: 'Darker Grotesque', sans-serif;
   font-size: 2rem;
   height: 100vh;
-  display: flex;
+  display: grid;
   justify-content: center;
   align-items: center;
   color: white;
@@ -267,4 +280,17 @@ section {
 }
 .four {
   background: lightsalmon;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 2s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
 }
