@@ -1,30 +1,20 @@
-/*
- * Made by Erik Terwan
- * 24th of November 2015
- * MIT License
- *
- *
- * If you are thinking of using this in
- * production code, beware of the browser
- * prefixes.
- */
-
 body
 {
   margin: 0;
   padding: 0;
   
   /* make it look decent enough */
-  background: url(daniel-leone-v7daTKlZzaw-unsplash.jpg);
+  background: url(mountain-background.png);
   background-size: cover;
-  color: #cdcdcd;
-  font-family: "Avenir Next", "Avenir", sans-serif;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 #menuToggle
 {
-  display: block;
-  position: relative;
+  display: inline-block;
+  position: fixed;
   top: 50px;
   left: 50px;
   
@@ -134,9 +124,9 @@ body
  */
 #menu
 {
-  position: absolute;
-  width: 300px;
-  height: 1060px;
+  position: fixed;
+  width: 230px;
+  height: 100%;
   margin: -100px 0 0 -50px;
   padding: 50px;
   padding-top: 125px;
@@ -155,7 +145,10 @@ body
 #menu li
 {
   padding: 10px 0;
-  font-size: 22px;
+  font-size: 30px;
+  font-weight: 500;
+  font-family: 'Darker Grotesque', sans-serif;
+  color: #5c5c5c;
 }
 
 /*
@@ -166,9 +159,20 @@ body
   transform: none;
 }
 
-/*
- * Test text
- */
+.info-block {
+  max-width: 1000px;
+  margin: 0 auto;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  position: absolute;
+  text-align: center;
+  font-family: 'Darker Grotesque', sans-serif;
+  padding-right: 2rem;
+  padding-left: 2rem;
+
+}
+
 
  .info-text {
   font-size: 5rem;
@@ -177,8 +181,11 @@ body
   line-height: 6rem;
   letter-spacing: 25px;
   color: #acb8b4;
-  position: relative;
-  text-align: center;
-  font-family: 'Darker Grotesque', sans-serif;
-  padding-top: 200px
+  margin-right: -.25em;
+ }
+
+ .info-text-small {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  color: #acb8b4;
  }
