@@ -209,6 +209,7 @@ header {
   height: 100vh;
   transform-style: preserve-3d;
   z-index: -1;
+  scroll-snap-align: start;
 }
 
 .background {
