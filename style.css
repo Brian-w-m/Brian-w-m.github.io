@@ -1,9 +1,16 @@
+:root {
+  --bg-colour: rgb(20,20,20);
+  --card-colour: rgb(23,23,23);
+}
+
 body
 {
   padding: 0;
   margin: 0;
   /* make it look decent enough */
 }
+
+/* Hamburger menu */
 
 #menuToggle
 {
@@ -153,6 +160,8 @@ body
   transform: none;
 }
 
+/* Info text */
+
 .info-block {
   max-width: 1000px;
   margin: 0 auto;
@@ -166,6 +175,8 @@ body
   padding-left: 2rem;
   animation: info-load 2500ms ease-out;
 }
+
+/* Info animation */
 
 @keyframes info-load {
   0% {
@@ -195,6 +206,8 @@ body
   color: #acb8b4;
  }
 
+/* Remove scrollbar */
+
 .wrapper::-webkit-scrollbar {
   display: none; 
 }
@@ -203,6 +216,8 @@ body
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
+
+/* Parallax effect container */
 
 .wrapper {
   height: 100vh;
@@ -251,7 +266,10 @@ section {
   align-items: center;
   color: white;
   scroll-snap-align: start;
+  text-align: center;
 }
+
+/* Scroll snap pages containers */
 
 .container {
   scroll-snap-type: y mandatory;
@@ -273,8 +291,15 @@ section {
   background: rgb(36,164,138);
   }
 .two {
-  background: rgb(211,79,79);
+  background: var(--bg-colour);
+  /* background: rgb(211,79,79); the og colour */
 }
+
+.grid-2 {
+  display: grid;
+  max-height: 72vh;
+}
+
 .three {
   background: rgb(67,91,175);
 }
@@ -293,4 +318,78 @@ section {
   opacity: 1;
   filter: blur(0);
   transform: translateX(0);
+}
+
+
+/* For card grid and radial gradient hover effect */
+#cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: 922px;
+  width: calc(100%-20px);
+  }
+
+#cards:hover > .card > .card-border {
+  opacity: 1;
+}
+
+.card {
+  background-color: rgba(255,255,255,0.1);
+  border-radius: 10px;
+  cursor: pointer;
+  height: 260px;
+  position: relative;
+  width: 300px; 
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card::before,
+.card > .card-border {
+  background: radial-gradient(
+    800px circle at var(--mouse-x) var(--mouse-y),
+    rgba(255,255,255,0.06),
+    transparent 40%
+  );
+  border-radius: inherit;
+  content: "";
+  height: 100%;
+  left: 0px;
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  transition: opacity 500ms;
+  width: 100%;
+  z-index: 2;
+}
+
+.card::before {
+  background: radial-gradient(
+    800px circle at var(--mouse-x) var(--mouse-y),
+    rgba(255,255,255,0.06),
+    transparent 40%
+  );
+  z-index: 3;
+}
+
+.card > .card-border {
+  background: radial-gradient(
+    400px circle at var(--mouse-x) var(--mouse-y),
+    rgba(255,255,255,0.3),
+    transparent 40%
+  );
+  z-index: 1;
+}
+
+.card > .card-content {
+  background-color: var(--card-colour);
+  border-radius: inherit;
+  height: calc(100% - 2px);
+  margin: 1px;
+  position: relative;
+  width: calc(100% - 2px);
+  z-index: 2;
 }
