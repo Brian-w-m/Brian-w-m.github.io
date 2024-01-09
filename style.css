@@ -10,6 +10,10 @@ body
   /* make it look decent enough */
 }
 
+p {
+  margin: 0;
+}
+
 /* Hamburger menu */
 
 #menuToggle
@@ -174,6 +178,7 @@ body
   padding-right: 2rem;
   padding-left: 2rem;
   animation: info-load 2500ms ease-out;
+  color: #acb8b4;
 }
 
 /* Info animation */
@@ -196,15 +201,33 @@ body
   text-transform: uppercase;
   line-height: 6rem;
   letter-spacing: 25px;
-  color: #acb8b4;
   margin-right: -.25em;
  }
 
  .info-text-small {
   font-size: 1.5rem;
   letter-spacing: 1px;
-  color: #acb8b4;
  }
+
+ .scroll-text {
+  font-family: 'Darker Grotesque', sans-serif;
+  color: #acb8b4;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 90vh;
+  animation: arrow-load 1500ms ease-out 2300ms;
+  animation-fill-mode: forwards;
+  opacity: 0;
+ }
+
+ @keyframes arrow-load {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
 /* Remove scrollbar */
 
@@ -226,7 +249,6 @@ body
   perspective: 10px;
   scroll-snap-type: y proximity;
   overflow-y: scroll;
-  height: 100vh;
 }
 
 header {
@@ -294,12 +316,10 @@ section {
   background: var(--bg-colour);
   /* background: rgb(211,79,79); the og colour */
 }
-
 .grid-2 {
   display: grid;
   max-height: 80vh;
 }
-
 .three {
   background: rgb(67,91,175);
 }
