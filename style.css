@@ -297,7 +297,7 @@ section {
 
 .grid-2 {
   display: grid;
-  max-height: 72vh;
+  max-height: 80vh;
 }
 
 .three {
@@ -326,7 +326,7 @@ section {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  max-width: 922px;
+  max-width: 1000px;
   width: calc(100%-20px);
   }
 
@@ -338,9 +338,9 @@ section {
   background-color: rgba(255,255,255,0.1);
   border-radius: 10px;
   cursor: pointer;
-  height: 260px;
+  height: 278px;
   position: relative;
-  width: 300px; 
+  width: 326px; 
 }
 
 .card:hover::before {
