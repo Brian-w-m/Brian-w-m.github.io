@@ -1,6 +1,7 @@
 :root {
   --bg-colour: rgb(20,20,20);
   --card-colour: rgb(23,23,23);
+  --copy-text: "Copy to clipboard"
 }
 
 body
@@ -167,11 +168,11 @@ p {
 /* Socials section*/
 .socials {
   position: absolute;
-  width: 50px;
+  width: 40px;
   z-index: 1;
   bottom: 0;
-  margin: 90px;
-  margin-bottom: 55px;
+  margin: 95px;
+  margin-bottom: 75px;
 }
 
 .socials img{
@@ -184,20 +185,17 @@ p {
 .email::after {
   --scale: 0;
   position: absolute;
-  content: attr(data-tooltip);
+  content: var(--copy-text);
   transform: scale(var(--scale));
   transition: 250ms transform;
   transform-origin: left center;
-  top: 85%;
   font-family: 'Darker Grotesque', sans-serif;
-  font-size: 23px;
+  font-size: 20px;
   color: #acb8b4;
-  height: max-content;
   width: max-content;
-  border-radius: 0.3rem;
-  padding: 0.8rem;
-  padding-bottom: 10px;
-  text-align: center;
+  top: 88.5%;
+  padding-left: 1.3vh;
+  letter-spacing: 1px;
 }
 
 .email:hover::after {

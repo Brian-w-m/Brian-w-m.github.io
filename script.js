@@ -27,9 +27,15 @@ document.getElementById("cards").onmousemove = e => {
     }
 }
 
-/* Copy text into clipboard */
+// Copy text into clipboard
 
 function copyText() {
-    navigator.clipboard.writeText
-        ("brianmwu18@gmail.com");
+    navigator.clipboard.writeText("brianmwu18@gmail.com");
+}
+
+// Change copy text
+
+function changeVar() {
+    document.documentElement.setAttribute("style", "--copy-text: 'Email copied!'");
+    setTimeout(() => { document.documentElement.setAttribute("style", "--copy-text: 'Copy to clipboard'"); }, 5000);
 }
