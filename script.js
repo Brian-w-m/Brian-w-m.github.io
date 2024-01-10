@@ -26,3 +26,10 @@ document.getElementById("cards").onmousemove = e => {
         card.style.setProperty("--mouse-y", `${y}px`);
     }
 }
+
+/* Copy text into clipboard */
+
+function copyText() {
+    navigator.clipboard.writeText
+        ("brianmwu18@gmail.com");
+}
