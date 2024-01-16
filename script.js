@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
     checkbox.addEventListener('change', function () {
         if (checkbox.checked) {
             // Change the value of the CSS variable when the checkbox is checked
-            setTimeout(() => { document.documentElement.style.setProperty('--socials-colour', '#fff'); }, 300);
+            setTimeout(() => { document.documentElement.style.setProperty('--socials-colour', 'rgb(70, 70, 70)'); }, 300);
         } else {
             // Reset the value when the checkbox is unchecked
             setTimeout(() => { document.documentElement.style.setProperty('--socials-colour', '#c0cec8'); }, 300);

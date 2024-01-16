@@ -87,6 +87,19 @@ p {
               opacity 0.55s ease;
 }
 
+
+#menuToggle:hover span:nth-last-child(2) {
+  transform: scaleX(0.5) translate(32px);
+}
+
+#menuToggle:hover span {
+  transform: scaleX(0.5) translateX(-3px);
+}
+
+#menuToggle:hover span:nth-last-child(3) {
+  transform: scale(1);
+}
+
 #menuToggle span:first-child
 {
   transform-origin: 0% 0%;
@@ -244,19 +257,18 @@ p {
   list-style: none;
   width: 48px;
   height: 48px;
-  background: var(--socials-colour);
   border-radius: 48px;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  /* box-shadow: 0 10px 25px rgba(0,0,0,0); */
   transition: 0.5s;
 }
 
 .socials-ul li:hover {
   width: 180px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0)
+  /* box-shadow: 0 10px 25px rgba(0,0,0,0) */
 }
 
 .socials-ul li::before {
@@ -296,7 +308,7 @@ p {
 }
 
 .socials-ul li ion-icon {
-  color: #060606;
+  color: var(--socials-colour);
   font-size: 1.75em;
   transition: 0.5s;
   transition-delay: 0.25s;
