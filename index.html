@@ -11,37 +11,79 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;500;600&display=swap" rel="stylesheet">
   <script defer src="./script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 
 <body>
   <nav role="navigation">
     <div id="menuToggle">
-      <input type="checkbox" />
+      <input type="checkbox" id="menu-check"/>
       <span></span>
       <span></span>
       <span></span>
       <ul id="menu">
-        <a href="#"><li>Home</li></a>
-        <a href="#"><li>About</li></a>
-        <a href="#"><li>Info</li></a>
-        <a href="#"><li>Contact</li></a>
-        <a href="https://youtube.com/" target="_blank"><li>Show me more</li></a>
+        <a href="#"><li class="underline-hover-effect">Home</li></a>
+        <a href="#about"><li class="underline-hover-effect">About</li></a>
+        <a href="#"><li class="underline-hover-effect">Info</li></a>
+        <a href="#"><li class="underline-hover-effect">Contact</li></a>
+        <a href="https://youtube.com/" target="_blank"><li class="underline-hover-effect">Show me more</li></a>
       </ul>
     </div>
   </nav>
 
-  <div class="socials">
-    <a href="/"><img src="images/totoro-white.png"></a>
-    <a href="https://www.linkedin.com/in/brian-wu-104845226/"><img src="images/icons8-linkedin-96.png"></a>
-    <a href="https://github.com/Brian-w-m"><img src="images/icons8-github-96.png"></a>
-    <a href="https://discord.com/users/276937398980575236"><img src="images/icons8-discord-new-96.png"></a>
+  <!-- <div class="socials">
+    <a href="/">
+      <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.5 38.5L18 16L21 24H26.5L29.5 15L34.5 38.5" stroke="var(--socials-colour)" stroke-width="2.5"/>
+        <path d="M26.3846 29.625C26.3846 29.2798 26.6601 29 27 29C27.3399 29 27.6154 29.2798 27.6154 29.625V33.375C27.6154 33.7202 27.3399 34 27 34C26.6601 34 26.3846 33.7202 26.3846 33.375V31.5V29.625Z" fill="var(--socials-colour)"/>
+        <path d="M21 29.625C21 29.2798 21.2755 29 21.6154 29C21.9553 29 22.2308 29.2798 22.2308 29.625V33.375C22.2308 33.7202 21.9553 34 21.6154 34C21.2755 34 21 33.7202 21 33.375V31.5V29.625Z" fill="var(--socials-colour)"/>
+        <path d="M24 42C33.9411 42 42 33.9411 42 24C42 14.0589 33.9411 6 24 6C14.0589 6 6 14.0589 6 24C6 33.9411 14.0589 42 24 42Z" stroke="var(--socials-colour)" stroke-width="3"/>
+      </svg>
+    </a>
+    <a href="https://www.linkedin.com/in/brian-wu-104845226/"><svg fill="var(--socials-colour)" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 64 64" width="48px" height="48px"><path d="M 23.773438 12 C 12.855437 12 12 12.854437 12 23.773438 L 12 40.226562 C 12 51.144563 12.855438 52 23.773438 52 L 40.226562 52 C 51.144563 52 52 51.145563 52 40.226562 L 52 23.773438 C 52 12.854437 51.145563 12 40.226562 12 L 23.773438 12 z M 21.167969 16 L 42.832031 16 C 47.625031 16 48 16.374969 48 21.167969 L 48 42.832031 C 48 47.625031 47.624031 48 42.832031 48 L 21.167969 48 C 16.374969 48 16 47.624031 16 42.832031 L 16 21.167969 C 16 16.374969 16.374969 16 21.167969 16 z M 22.501953 18.503906 C 20.872953 18.503906 19.552734 19.824172 19.552734 21.451172 C 19.552734 23.078172 20.871953 24.400391 22.501953 24.400391 C 24.126953 24.400391 25.447266 23.079172 25.447266 21.451172 C 25.447266 19.826172 24.126953 18.503906 22.501953 18.503906 z M 37.933594 26.322266 C 35.473594 26.322266 33.823437 27.672172 33.148438 28.951172 L 33.078125 28.951172 L 33.078125 26.728516 L 28.228516 26.728516 L 28.228516 43 L 33.28125 43 L 33.28125 34.949219 C 33.28125 32.826219 33.687359 30.771484 36.318359 30.771484 C 38.912359 30.771484 38.945312 33.200891 38.945312 35.087891 L 38.945312 43 L 44 43 L 44 34.074219 C 44 29.692219 43.054594 26.322266 37.933594 26.322266 z M 19.972656 26.728516 L 19.972656 43 L 25.029297 43 L 25.029297 26.728516 L 19.972656 26.728516 z"/></svg></a>
+    <a href="https://github.com/Brian-w-m"><svg fill="var(--socials-colour)" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 64 64" width="48px" height="48px"><path d="M 32 10 C 19.85 10 10 19.85 10 32 C 10 44.15 19.85 54 32 54 C 44.15 54 54 44.15 54 32 C 54 19.85 44.15 10 32 10 z M 32 14 C 41.941 14 50 22.059 50 32 C 50 40.238706 44.458716 47.16934 36.904297 49.306641 C 36.811496 49.1154 36.747844 48.905917 36.753906 48.667969 C 36.784906 47.458969 36.753906 44.637563 36.753906 43.601562 C 36.753906 41.823563 35.628906 40.5625 35.628906 40.5625 C 35.628906 40.5625 44.453125 40.662094 44.453125 31.246094 C 44.453125 27.613094 42.554688 25.720703 42.554688 25.720703 C 42.554688 25.720703 43.551984 21.842266 42.208984 20.197266 C 40.703984 20.034266 38.008422 21.634812 36.857422 22.382812 C 36.857422 22.382813 35.034 21.634766 32 21.634766 C 28.966 21.634766 27.142578 22.382812 27.142578 22.382812 C 25.991578 21.634813 23.296016 20.035266 21.791016 20.197266 C 20.449016 21.842266 21.445312 25.720703 21.445312 25.720703 C 21.445312 25.720703 19.546875 27.611141 19.546875 31.244141 C 19.546875 40.660141 28.371094 40.5625 28.371094 40.5625 C 28.371094 40.5625 27.366329 41.706312 27.265625 43.345703 C 26.675939 43.553637 25.872132 43.798828 25.105469 43.798828 C 23.255469 43.798828 21.849984 42.001922 21.333984 41.169922 C 20.825984 40.348922 19.7845 39.660156 18.8125 39.660156 C 18.1725 39.660156 17.859375 39.981656 17.859375 40.347656 C 17.859375 40.713656 18.757609 40.968484 19.349609 41.646484 C 20.597609 43.076484 20.574484 46.292969 25.021484 46.292969 C 25.547281 46.292969 26.492043 46.171872 27.246094 46.068359 C 27.241926 47.077908 27.230199 48.046135 27.246094 48.666016 C 27.251958 48.904708 27.187126 49.114952 27.09375 49.306641 C 19.540258 47.168741 14 40.238046 14 32 C 14 22.059 22.059 14 32 14 z"/></svg></a>
+    <a href="https://discord.com/users/276937398980575236"><svg fill="var(--socials-colour)" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 64 64" width="48px" height="48px"><path d="M 28.541016 12.441406 C 21.305016 13.049406 15.693359 16.132812 15.693359 16.132812 C 15.693359 16.132812 8 24.196828 8 39.423828 L 8 44.294922 L 9.8164062 45.478516 C 15.655406 49.284516 19.816594 51.212891 22.183594 51.212891 L 24.287109 51.212891 L 27.035156 47.21875 C 28.545156 47.48475 30.227 47.666016 32 47.666016 C 33.773 47.666016 35.453844 47.48475 36.964844 47.21875 L 39.712891 51.212891 L 41.816406 51.212891 C 44.183406 51.212891 48.344594 49.283516 54.183594 45.478516 L 56 44.294922 L 56 39.423828 C 56 24.379828 48.306641 16.132812 48.306641 16.132812 C 48.306641 16.132813 43.048031 13.140406 35.457031 12.441406 L 34.248047 14.732422 C 33.572047 14.675422 32.812047 14.636719 31.998047 14.636719 C 31.184047 14.636719 30.425047 14.676422 29.748047 14.732422 L 28.541016 12.441406 z M 26.3125 16.787109 L 27.523438 19.083984 C 27.523437 19.083984 29.449953 18.638672 32.001953 18.638672 C 34.553953 18.638672 36.478516 19.083984 36.478516 19.083984 L 37.689453 16.787109 C 41.593453 17.326109 45.820312 19.373047 45.820312 19.373047 C 45.820312 19.373047 52 26.530828 52 39.423828 L 52 42.126953 C 52 42.126953 44.194453 47.213891 41.814453 47.212891 L 39.507812 43.857422 C 40.941812 43.215422 42.898438 42.099609 42.898438 42.099609 L 42.183594 41.546875 C 42.183594 41.546875 37.609047 43.664062 31.998047 43.664062 C 26.387047 43.664063 21.814453 41.546875 21.814453 41.546875 L 21.099609 42.099609 C 21.099609 42.099609 23.056234 43.215422 24.490234 43.857422 L 22.183594 47.212891 C 19.805594 47.212891 12 42.126953 12 42.126953 L 12 39.423828 C 12 26.530828 18.181641 19.373047 18.181641 19.373047 C 18.181641 19.373047 22.4085 17.325109 26.3125 16.787109 z M 24.009766 29.044922 C 21.649766 29.044922 19.734375 31.194703 19.734375 33.845703 C 19.734375 36.497703 21.649766 38.646484 24.009766 38.646484 C 26.369766 38.646484 28.283203 36.497703 28.283203 33.845703 C 28.283203 31.193703 26.369766 29.044922 24.009766 29.044922 z M 39.990234 29.044922 C 37.629234 29.044922 35.716797 31.194703 35.716797 33.845703 C 35.716797 36.497703 37.630234 38.646484 39.990234 38.646484 C 42.351234 38.646484 44.265625 36.497703 44.265625 33.845703 C 44.265625 31.193703 42.351234 29.044922 39.990234 29.044922 z"/></svg></a>
     <div class="email">
-      <img onclick="copyText();changeVar();" src="images/icons8-email-96.png">
+      <svg onclick="copyText();changeVar();" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M37.5 12.5H10.5C9.39543 12.5 8.5 13.3954 8.5 14.5V33.5C8.5 34.6046 9.39543 35.5 10.5 35.5H37.5C38.6046 35.5 39.5 34.6046 39.5 33.5V14.5C39.5 13.3954 38.6046 12.5 37.5 12.5Z" stroke="var(--socials-colour)" stroke-width="3.1"/>
+        <path d="M10 14L22.4325 24.998C22.7982 25.3214 23.2695 25.5 23.7577 25.5H24.2423C24.7305 25.5 25.2018 25.3214 25.5675 24.998L38 14" stroke="var(--socials-colour)" stroke-width="3.1"/>
+      </svg>
     </div>
-  </div>
+  </div> -->
 
+  <ul class="socials-ul">
+    <a href="/">
+      <li style="--i:#a955ff;--j:#ea51ff;">
+        <span class="icon"><ion-icon name="code-slash-outline"></ion-icon></span>
+        <span class="title">Refresh</span>
+      </li>
+    </a>
+    <a href="https://www.linkedin.com/in/brian-wu-104845226/">
+      <li style="--i:#56ccf2;--j:#2f80ed;">
+        <span class="icon"><ion-icon name="logo-linkedin"></ion-icon></span>
+        <span class="title">Linkedin</span>
+      </li>
+    </a>
+    <a href="https://github.com/Brian-w-m">
+      <li style="--i:#ff9966;--j:#ff5e62;">
+        <span class="icon"><ion-icon name="logo-github"></ion-icon></span>
+        <span class="title">Github</span>
+      </li>
+    </a>
+    <a href="https://discord.com/users/276937398980575236">
+      <li style="--i:#80ff72;--j:#7ee8fa;">
+        <span class="icon"><ion-icon name="logo-discord"></ion-icon></span>
+        <span class="title">Discord</span>
+      </li>
+    </a>
+    <li onclick="copyText();changeVar();" style="--i:#ffa9c6;--j:#f434e2;">
+      <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+      <span class="title" id="copy-text">Copy email</span>
+    </li>
+  </ul>
 
-  <div class="wrapper">
+  <div class="container">
     <header>
       <img src="images/mountain-background.png" class="background">
       <img src="images/mountain.png" class="foreground">
@@ -54,49 +96,49 @@
         <p>&#11163;</p>
       </div>
     </header>
-
-    <div class="container">
-      <section class="one">
-        <h1 class="hidden">First Page</h1>
-      </section>
-      <section class="two">
-        <div class="grid-2">
-          <h1 class="hidden">Second Page</h1>
-          <div id="cards">
-            <div class="card">
-              <div class="card-border"></div>
-              <div class="card-content"></div>
-            </div>
-            <div class="card">
-              <div class="card-border"></div>
-              <div class="card-content"></div>
-            </div>
-            <div class="card">
-              <div class="card-border"></div>
-              <div class="card-content"></div>
-            </div>
-            <div class="card">
-              <div class="card-border"></div>
-              <div class="card-content"></div>
-            </div>
-            <div class="card">
-              <div class="card-border"></div>
-              <div class="card-content"></div>
-            </div>
-            <div class="card">
-              <div class="card-border"></div>
-              <div class="card-content"></div>
-            </div>
+    <section class="one" id="about">
+      <div class="grid-1">
+        <div class="info-1">
+          <h1 class="hidden first-title">First Page</h1>
+          <p class="first-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, facere ex magnam nulla tenetur eveniet officia a alias veritatis?</p>
+        </div>
+        <div id="cards">
+          <div class="card">
+            <div class="card-border"></div>
+            <div class="card-content"></div>
+          </div>
+          <div class="card">
+            <div class="card-border"></div>
+            <div class="card-content"></div>
+          </div>
+          <div class="card">
+            <div class="card-border"></div>
+            <div class="card-content"></div>
+          </div>
+          <div class="card">
+            <div class="card-border"></div>
+            <div class="card-content"></div>
+          </div>
+          <div class="card">
+            <div class="card-border"></div>
+            <div class="card-content"></div>
+          </div>
+          <div class="card">
+            <div class="card-border"></div>
+            <div class="card-content"></div>
           </div>
         </div>
-      </section>
-      <section class="three">
-        <h1 class="hidden">Third Page</h1>
-      </section>
-      <section class="four">
-        <h1 class="hidden">Fourth Page</h1>
-      </section>
-    </div>
+      </div>
+    </section>
+    <section class="two">
+      <h1 class="hidden">Second Page</h1>
+    </section>
+    <section class="three">
+      <h1 class="hidden">Third Page</h1>
+    </section>
+    <section class="four">
+      <h1 class="hidden">Fourth Page</h1>
+    </section>
   </div>
 
 </body>

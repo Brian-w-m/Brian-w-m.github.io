@@ -36,6 +36,22 @@ function copyText() {
 // Change copy text
 
 function changeVar() {
-    document.documentElement.setAttribute("style", "--copy-text: 'Email copied!'");
-    setTimeout(() => { document.documentElement.setAttribute("style", "--copy-text: 'Copy to clipboard'"); }, 5000);
+    document.getElementById("copy-text").textContent = "Copied!";
+    setTimeout(() => { document.getElementById("copy-text").textContent = "Copy email"; }, 5000);
+
 }
+
+// Check box to change colour
+document.addEventListener('DOMContentLoaded', function () {
+    const checkbox = document.getElementById('menu-check');
+
+    checkbox.addEventListener('change', function () {
+        if (checkbox.checked) {
+            // Change the value of the CSS variable when the checkbox is checked
+            setTimeout(() => { document.documentElement.style.setProperty('--socials-colour', '#fff'); }, 300);
+        } else {
+            // Reset the value when the checkbox is unchecked
+            setTimeout(() => { document.documentElement.style.setProperty('--socials-colour', '#c0cec8'); }, 300);
+        }
+    });
+});
