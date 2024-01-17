@@ -492,10 +492,6 @@ section {
   bottom: 35vh;
 }
 
-.hide {
-  transform: scale(0);
-}
-
 #image-track {
   display: flex;
   gap: 2vmin;
@@ -517,10 +513,11 @@ section {
 }
 
 .img-text {
-  color: aliceblue;
-  width: 0px;
+  width: 0;
+  height: 10px;
   position: relative;
-  transform: translate3d(-10vmin,56vmin,0);
+  transform: translate3d(-40vmin,60vmin,0);
+  white-space: nowrap;
   z-index: 1;
 }
 

@@ -108,8 +108,6 @@ window.ontouchmove = e => handleOnMove(e.touches[0]);
 
 const imgs = document.querySelectorAll('#image-track img');
 
-const hiddenElement1 = document.getElementById('hidden1');
-
 imgs.forEach(img => {
   var a = 0
   img.addEventListener('click', function() {
@@ -119,7 +117,6 @@ imgs.forEach(img => {
       img.style.padding = '0';
       img.style.zIndex = '0';
       a = 1;
-      hiddenElement1.classList.add('hide');
     } else if(a===1) {
       setTimeout(()=>{a = 2}, 500);
       $(img).click(
