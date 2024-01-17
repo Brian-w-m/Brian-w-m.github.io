@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;500;600&display=swap" rel="stylesheet">
   <script defer src="./script.js"></script>
+  <script src="jquery-3.7.1.min.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
@@ -96,11 +97,36 @@
         <p>&#11163;</p>
       </div>
     </header>
-    <section class="one" id="projects">
+    <section class="one">
+      <h1 class="hidden" id="hidden1">First Page</h1>
+      <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+        <img class="image" src="https://images.unsplash.com/photo-1524781289445-ddf8f5695861?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" />
+        <p class="img-text">hello</p>
+        <img class="image" src="https://images.unsplash.com/photo-1610194352361-4c81a6a8967e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80" draggable="false" />
+        <p class="img-text">hello</p>
+        <img class="image" src="https://images.unsplash.com/photo-1618202133208-2907bebba9e1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" />
+        <p class="img-text">hello</p>
+        <img class="image" src="https://images.unsplash.com/photo-1495805442109-bf1cf975750b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" />
+        <p class="img-text">hello</p>
+        <img class="image" src="https://images.unsplash.com/photo-1548021682-1720ed403a5b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" />
+        <p class="img-text">hello</p>
+        <img class="image" src="https://images.unsplash.com/photo-1496753480864-3e588e0269b3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2134&q=80" draggable="false" />
+        <p class="img-text">hello</p>
+        <img class="image" src="https://images.unsplash.com/photo-1613346945084-35cccc812dd5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1759&q=80" draggable="false" />
+        <p class="img-text">hello</p>
+        <img class="image" src="https://images.unsplash.com/photo-1516681100942-77d8e7f9dd97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" />
+        <p class="img-text">hello</p>
+      </div>
+      
+      <div id="trans">
+        <span class="num" id="img-perc">0</span>
+      </div>
+    </section>
+    <section class="two" id="projects">
       <div class="grid-1">
         <div class="info-1">
-          <h1 class="hidden first-title">Projects</h1>
-          <p class="first-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, facere ex magnam nulla tenetur eveniet officia a alias veritatis?</p>
+          <h1 class="hidden second-title">Projects</h1>
+          <p class="second-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, facere ex magnam nulla tenetur eveniet officia a alias veritatis?</p>
         </div>
         <div id="cards">
           <div class="card">
@@ -129,9 +155,6 @@
           </div>
         </div>
       </div>
-    </section>
-    <section class="two">
-      <h1 class="hidden">Second Page</h1>
     </section>
     <section class="three">
       <h1 class="hidden">Third Page</h1>

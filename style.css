@@ -1,6 +1,6 @@
 :root {
-  --bg-colour: rgb(11,22,24);
-  --card-colour: rgb(11, 22, 24);
+  --bg-colour: rgb(17,17,17);
+  --card-colour: rgb(19, 19, 19);
   /* --copy-text: "Copy email"; */
   --socials-colour: #c0cec8;
 }
@@ -457,7 +457,8 @@ section {
   align-items: center;
   color: white;
   scroll-snap-align: start;
-  text-align: center; 
+  text-align: center;
+  overflow: hidden; 
 }
 
 /* Scroll snap pages containers */
@@ -482,7 +483,56 @@ section {
 
 .one {
   background: var(--bg-colour);
+  display: flex;
+  flex-direction: column;
   }
+
+#hidden1 {
+  position: relative;
+  bottom: 35vh;
+}
+
+.hide {
+  transform: scale(0);
+}
+
+#image-track {
+  display: flex;
+  gap: 2vmin;
+  position: absolute;
+  left: 50%;
+  top: 151.5vh;
+  transform: translate(0%, -50%); 
+  user-select: none; /* -- Prevent image highlighting -- */
+}
+
+#image-track > .image {
+  width: 40vmin;
+  height: 56vmin;
+  object-fit: cover;
+  object-position: 100% center;
+  transition: 0.5s;
+  padding-top: 10vmin;
+  z-index: 2;
+}
+
+.img-text {
+  color: aliceblue;
+  width: 0px;
+  position: relative;
+  transform: translate3d(-10vmin,56vmin,0);
+  z-index: 1;
+}
+
+.num {
+  position: absolute;
+  bottom: -97vh;
+}
+
+.two {
+  background: var(--bg-colour);
+  /* background: rgb(211,79,79); the og colour */
+}
 .grid-1 {
   display: grid;
   position: relative;
@@ -493,7 +543,7 @@ section {
   margin-left: auto;
   margin-right: auto;
 }
-.first-title {
+.second-title {
   /* background: linear-gradient(106.62deg, rgb(232, 78, 56) 6.68%, rgb(186, 44, 184) 82.69%); */
   background: linear-gradient(124.31deg, rgb(70, 227, 183) 0.18%, rgb(82, 124, 172) 89.2%);
   -webkit-background-clip: text;
@@ -501,17 +551,13 @@ section {
   width: fit-content;
   margin: 0;
 }
-.first-text {
+.second-text {
   width: 45vw;
   color: #acb8b4;
   margin-top: 3vh;
   margin-bottom: 4vh;
   text-align: left;
   position: relative;
-}
-.two {
-  background: rgb(36,164,138);
-  /* background: rgb(211,79,79); the og colour */
 }
 .three {
   background: rgb(67,91,175);
