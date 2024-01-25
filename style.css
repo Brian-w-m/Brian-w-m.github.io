@@ -519,6 +519,7 @@ section {
   transform: translate3d(-40vmin,60vmin,0);
   white-space: nowrap;
   z-index: 1;
+  cursor: pointer;
 }
 
 .num {
