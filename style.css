@@ -496,7 +496,7 @@ section {
   display: flex;
   gap: 2vmin;
   position: absolute;
-  left: 50%;
+  left: 40.7%;
   top: 151.5vh;
   transform: translate(0%, -50%); 
   user-select: none; /* -- Prevent image highlighting -- */
